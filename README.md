@@ -36,6 +36,7 @@ si los health checks fallan post-deploy, o via `git revert` + push a main.
 ---
 
 ## Deploy en produccion
-URL: https://examen-so.onrender.com
+URL: https://examen-final-so.onrender.com
 
-<!-- Agregar screenshot del Actions tab aqui -->
+## Evidencia de deployment exitoso
+![CD Pipeline exitoso](evidencia_deploy.png)
