@@ -1,8 +1,0 @@
-﻿services:
-  - type: web
-    name: examen-final-SO
-    env: node
-    plan: free
-    buildCommand: npm install
-    startCommand: node index.js
-    healthCheckPath: /
