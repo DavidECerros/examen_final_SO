@@ -1,17 +1,19 @@
-# ============================================================
-# Dockerfile con errores intencionales - Examen 2, Actividad 1 Parte A
-# Tarea: identifica y corrige los 4 errores para que el build funcione.
-#        Comando de verificacion: docker build -t myapp .
+﻿# ============================================================
+# Dockerfile CORREGIDO - Examen 2, Actividad 1 Parte A
+# ERROR 1: node:latest -> node:18 (version fija, best practice)
+# ERROR 2: Faltaba RUN antes de npm install
+# ERROR 3: npm install sin RUN es instruccion invalida
+# ERROR 4: EXPOSE 80 -> EXPOSE 3000 (puerto estandar de Node.js)
 # ============================================================
 
-FROM node:latest                      # ERROR 1
+FROM node:18
 
 WORKDIR /app
 
-COPY . .                              # ERROR 2
+COPY . .
 
-npm install --production              # ERROR 3
+RUN npm install --production
 
-EXPOSE 80                             # ERROR 4
+EXPOSE 3000
 
-CMD node index.js
+CMD ["node", "index.js"]
